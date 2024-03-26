@@ -6,7 +6,7 @@ import os
 from PIL import Image
 
 
-path = 'C:/Университет/1 курс 2 семестр/Разработка пользовательского интерфейса/Задание 4. Просмотрщик изображений/files'
+path = 'C:/Code/interface_py/Задание 4. Просмотрщик изображений/files'
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -120,10 +120,10 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def slideshow_time_func(self):
         if self.picFlag is True:
-            self.temp = self.openFile.split('/')[-1]
-            self.files.remove(self.temp)
+            # self.temp = self.openFile.split('/')[-1]
+            # self.files.remove(self.temp)
             self.indexFile = 0
-            self.timer.start(5000)
+            self.timer.start(3000)
         else:
             pass
 
@@ -134,7 +134,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.picture.setPixmap(self.pixmap)
         self.indexFile += 1
         if self.indexFile == len(self.files):
-            self.files.append(self.temp)
+            # self.files.append(self.temp)
             self.timer.stop()
 
     def go_down_func(self):

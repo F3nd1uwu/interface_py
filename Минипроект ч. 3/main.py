@@ -9,7 +9,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
 
-        uic.loadUi('D:/Code/interface_py/Минипроект ч. 3/ui/MainWindow.ui', self)
+        uic.loadUi('C:/Code/interface_py/Минипроект ч. 3/ui/MainWindow.ui', self)
 
         self.signals()
         self.icons()
@@ -30,14 +30,14 @@ class MainWindow(QtWidgets.QMainWindow):
         self.reset_votes.triggered.connect(self.reset_func)
 
     def icons(self):
-        self.new_vote.setIcon(QIcon('D:/Code/interface_py/Минипроект ч. 3/ico/new.png'))
-        self.open_vote.setIcon(QIcon('D:/Code/interface_py/Минипроект ч. 3/ico/open.png'))
-        self.close_vote.setIcon(QIcon('D:/Code/interface_py/Минипроект ч. 3/ico/close.png'))
-        self.exit_act.setIcon(QIcon('D:/Code/interface_py/Минипроект ч. 3/ico/exit.png'))
-        self.change_vote.setIcon(QIcon('D:/Code/interface_py/Минипроект ч. 3/ico/change.png'))
-        self.reset_votes.setIcon(QIcon('D:/Code/interface_py/Минипроект ч. 3/ico/reset.png'))
-        self.vote_btn.setIcon(QIcon('D:/Code/interface_py/Минипроект ч. 3/ico/check.png'))
-        self.exit_btn.setIcon(QIcon('D:/Code/interface_py/Минипроект ч. 3/ico/exit.png'))
+        self.new_vote.setIcon(QIcon('C:/Code/interface_py/Минипроект ч. 3/ico/new.png'))
+        self.open_vote.setIcon(QIcon('C:/Code/interface_py/Минипроект ч. 3/ico/open.png'))
+        self.close_vote.setIcon(QIcon('C:/Code/interface_py/Минипроект ч. 3/ico/close.png'))
+        self.exit_act.setIcon(QIcon('C:/Code/interface_py/Минипроект ч. 3/ico/exit.png'))
+        self.change_vote.setIcon(QIcon('C:/Code/interface_py/Минипроект ч. 3/ico/change.png'))
+        self.reset_votes.setIcon(QIcon('C:/Code/interface_py/Минипроект ч. 3/ico/reset.png'))
+        self.vote_btn.setIcon(QIcon('C:/Code/interface_py/Минипроект ч. 3/ico/check.png'))
+        self.exit_btn.setIcon(QIcon('C:/Code/interface_py/Минипроект ч. 3/ico/exit.png'))
 
     def create_new_dialog_n(self):
         self.NewFlag = True
@@ -98,7 +98,7 @@ class NewWindow(QtWidgets.QDialog):
         super().__init__(parent)
         self.parent = parent
 
-        uic.loadUi('D:/Code/interface_py/Минипроект ч. 3/ui/arguments.ui', self)
+        uic.loadUi('C:/Code/interface_py/Минипроект ч. 3/ui/arguments.ui', self)
 
         if self.parent.NewFlag:
             self.data = {}
@@ -113,10 +113,10 @@ class NewWindow(QtWidgets.QDialog):
         self.new_icons()
 
     def new_icons(self):
-        self.up.setIcon(QIcon('D:/Code/interface_py/Минипроект ч. 3/ico/up.png'))
-        self.down.setIcon(QIcon('D:/Code/interface_py/Минипроект ч. 3/ico/down.png'))
-        self.create_arg.setIcon(QIcon('D:/Code/interface_py/Минипроект ч. 3/ico/plus.png'))
-        self.delete_arg.setIcon(QIcon('D:/Code/interface_py/Минипроект ч. 3/ico/trash.png'))
+        self.up.setIcon(QIcon('C:/Code/interface_py/Минипроект ч. 3/ico/up.png'))
+        self.down.setIcon(QIcon('C:/Code/interface_py/Минипроект ч. 3/ico/down.png'))
+        self.create_arg.setIcon(QIcon('C:/Code/interface_py/Минипроект ч. 3/ico/plus.png'))
+        self.delete_arg.setIcon(QIcon('C:/Code/interface_py/Минипроект ч. 3/ico/trash.png'))
 
     def new_signals(self):
         self.buttonBox.accepted.connect(self.save_func)
