@@ -137,23 +137,26 @@ class NewWindow(QtWidgets.QDialog):
             pass
 
     def delete_from_list(self):
-        selected_item = self.list_of_args.currentItem()
-        if selected_item:
-            self.list_of_args.takeItem(self.list_of_args.row(selected_item))
+        if self.parent.NewFlag is True:
+            selected_item = self.list_of_args.currentItem()
+            if selected_item:
+                self.list_of_args.takeItem(self.list_of_args.row(selected_item))
 
     def up_func(self):
-        current_row = self.list_of_args.currentRow()
-        if current_row > 0:
-            item = self.list_of_args.takeItem(current_row)
-            self.list_of_args.insertItem(current_row - 1, item)
-            self.list_of_args.setCurrentRow(current_row - 1)
+        if self.parent.NewFlag is True:
+            current_row = self.list_of_args.currentRow()
+            if current_row > 0:
+                item = self.list_of_args.takeItem(current_row)
+                self.list_of_args.insertItem(current_row - 1, item)
+                self.list_of_args.setCurrentRow(current_row - 1)
 
     def down_func(self):
-        current_row = self.list_of_args.currentRow()
-        if current_row < self.list_of_args.count() - 1:
-            item = self.list_of_args.takeItem(current_row)
-            self.list_of_args.insertItem(current_row + 1, item)
-            self.list_of_args.setCurrentRow(current_row + 1)
+        if self.parent.NewFlag is True:
+            current_row = self.list_of_args.currentRow()
+            if current_row < self.list_of_args.count() - 1:
+                item = self.list_of_args.takeItem(current_row)
+                self.list_of_args.insertItem(current_row + 1, item)
+                self.list_of_args.setCurrentRow(current_row + 1)
 
     def save_func(self):
         file_name = QtWidgets.QFileDialog.getSaveFileName(None, 'Сохранить как...', '', '*.json')[0]
