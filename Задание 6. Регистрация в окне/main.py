@@ -107,9 +107,9 @@ class ProfileWindow(QtWidgets.QMainWindow):
         self.notification_data.hide()
         self.notification_passw.hide()
         self.openFile = '1.jpg'
-        self.pixmap = QtWidgets.QPixmap(self.openFile)
-        self.pixmap = self.pixmap.scaled(Image.open(self.openFile).size[0], Image.open(self.openFile).size[1])
-        self.picture.setPixmap(self.pixmap)
+        self.pixmap = QtGui.QPixmap(self.openFile)
+        self.pixmap = self.pixmap.scaled(700, 600)
+        self.ava.setPixmap(self.pixmap)
         self.main()
 
     def main(self):
