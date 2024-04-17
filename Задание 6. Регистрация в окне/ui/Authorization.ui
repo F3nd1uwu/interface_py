@@ -85,6 +85,12 @@ border-radius: 8px;</string>
       </property>
       <item>
        <widget class="QLabel" name="notification">
+        <property name="minimumSize">
+         <size>
+          <width>430</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <family>Comic sans MS</family>
@@ -144,6 +150,19 @@ border-radius: 8px;</string>
         </property>
         <property name="placeholderText">
          <string>Password...</string>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="password2">
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Password again...</string>
         </property>
         <property name="clearButtonEnabled">
          <bool>true</bool>
