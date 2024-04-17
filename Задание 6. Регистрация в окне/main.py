@@ -3,6 +3,7 @@ import sys
 # import os
 from check_db import *
 import re
+from PIL import Image
 
 # os.chdir('./Задание 6. Регистрация в окне')
 
@@ -105,6 +106,10 @@ class ProfileWindow(QtWidgets.QMainWindow):
         uic.loadUi('./ui/profile.ui', self)
         self.notification_data.hide()
         self.notification_passw.hide()
+        self.openFile = '1.jpg'
+        self.pixmap = QtWidgets.QPixmap(self.openFile)
+        self.pixmap = self.pixmap.scaled(Image.open(self.openFile).size[0], Image.open(self.openFile).size[1])
+        self.picture.setPixmap(self.pixmap)
         self.main()
 
     def main(self):
