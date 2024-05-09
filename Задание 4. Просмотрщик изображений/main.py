@@ -6,7 +6,7 @@ import os
 from PIL import Image
 
 
-path = 'C:/Code/interface_py/Задание 4. Просмотрщик изображений/files'
+path = 'D:/Code/interface_py/Задание 4. Просмотрщик изображений/files'
 
 
 class MainWindow(QtWidgets.QMainWindow):
