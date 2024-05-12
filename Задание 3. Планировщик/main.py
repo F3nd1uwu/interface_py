@@ -3,7 +3,9 @@ import json
 from PyQt6 import QtWidgets, uic
 from PyQt6.QtGui import QIcon
 from PyQt6.QtCore import Qt, QDateTime
+import os
 
+os.chdir('C:\Code\interface_py\Задание 3. Планировщик')
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):

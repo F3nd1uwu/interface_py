@@ -1,11 +1,11 @@
 from PyQt6 import QtWidgets, uic, QtCore, QtGui
 import sys
-# import os
+import os
 from check_db import *
 import re
 from PIL import Image
 
-# os.chdir('./Задание 6. Регистрация в окне')
+os.chdir('./Задание 6. Регистрация в окне')
 
 class AuthorizationWindow(QtWidgets.QWidget):
     def __init__(self, parent=None):
